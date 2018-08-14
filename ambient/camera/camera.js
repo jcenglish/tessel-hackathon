@@ -10,6 +10,4 @@ var camera = new av.Camera();
 
 module.exports = function (response) {
          camera.capture().pipe(response);
-
-         response.end()
 }

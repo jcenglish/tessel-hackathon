@@ -23,7 +23,7 @@ ambient.on('ready', function () {
 
     //Listen for sound events
     setInterval(function () {
-      ambient.getSoundBuffer(async function (err, sounddata) {
+      ambient.getSoundBuffer(function (err, sounddata) {
         if (err) {
           console.log(err)
         }
@@ -34,7 +34,7 @@ ambient.on('ready', function () {
         console.log(average)
         if (average > 0.35) {
           //take a picture
-          await camera(response)
+          camera(response)
           console.log('Picture captured------------')
         }
 
